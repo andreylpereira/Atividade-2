@@ -4,17 +4,13 @@ function submeterPorcentagem() {
     const inputValidos = document.getElementById("Vvalidos").value
     const inputBrancos = document.getElementById("Vbrancos").value
     const inputNulos = document.getElementById("Vnulos").value
-    var porcentagem = (inputValidos + inputBrancos + inputNulos)
 
-    If (porcentagem === inputEleitores) {
-        alert (
-        ("Eleitores: "+(inputValidos/100 + inputBrancos/100 + inputNulos/100)"%") + 
-        ("Válidos: "+(inputValidos/100)"%") + 
-        ("Brancos: "+(inputBrancos/100)"%") + 
-        ("Nulos: "+(inputNulos/100)"%")
-        )
+    const per_Vvalidos = Math.round(inputValidos/inputEleitores * 100)
+    const per_Vbrancos = Math.round(inputBrancos/inputEleitores * 100)
+    const per_Vnulos = Math.round(inputNulos/inputEleitores * 100)
 
-    } else {
-        alert ("Digite os dados corretamente");
-    } 
-};
+    document.getElementById("Vvalidos").value = "${inputValidos} são ${per_Vvalidos} % do total"
+    document.getElementById("Vbrancos").value = "${inputBrancos} são ${per_Vbrancos} % do total"
+    document.getElementById("Vnulos").value = "${inputNulos} são ${per_Vnulos} % do total"
+
+}
