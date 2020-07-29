@@ -1,12 +1,14 @@
-function retornarSalario() {
+let salarioAnual = window.prompt ("Digite o seu salário anual:")
+let pisoMensal = window.prompt ("Digite o piso mensal da sua categoria:")
 
-    const mensalSalario = document.getElementById("salarioMensal").value
-    const categoriaSalario = document.getElementById("salarioCategoria").value
-   
+let salarioMensal = salarioAnual / 12
+
+    if (salarioMensal < pisoMensal) {
+        
+        window.alert('O seu salário é de R$ ${salarioMensal}. \n Você recebe abaixo do piso salarial')
     
-    if((mensalSalario.value / 12) >= (categoriaSalario.value)) {
-        alert("Seu salário está acima do piso salarial. R$: "+mensalSalario.value / 12")
     } else {
-        alert("Seu salário não está acima do piso salarial. R$: "+mensalSalario.value / 12")
+
+        window.alert('O seu salário é de R$ $$$$$${salarioMensal}. \n Você recebe acima do piso salarial')
+    
     }
-}
