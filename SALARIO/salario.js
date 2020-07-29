@@ -5,10 +5,10 @@ let salarioMensal = salarioAnual / 12
 
     if (salarioMensal < pisoMensal) {
         
-        window.alert('O seu salário é de R$ ${salarioMensal}. \n Você recebe abaixo do piso salarial')
+        window.alert('O seu salário é de R$${pisoMensal}. \n Você recebe abaixo do piso salarial')
     
     } else {
 
-        window.alert('O seu salário é de R$ $$$$$${salarioMensal}. \n Você recebe acima do piso salarial')
+        window.alert('O seu salário é de R$${pisoMensal}. \n Você recebe acima do piso salarial')
     
     }
